@@ -1,0 +1,822 @@
+ /* =========================================
+   MARVEL STUDIOS CINEMATIC GALLERY
+========================================= */
+
+
+/* ---------- RESET ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #080808;
+
+    color: white;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+
+    width: 100%;
+
+    height: 70px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background: #050505;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid #222;
+}
+
+
+.logo {
+
+    background: #e62429;
+
+    color: white;
+
+    padding: 8px 16px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    border: 2px solid white;
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+
+    color: #e62429;
+}
+
+
+/* =========================================
+   HERO VIDEO
+========================================= */
+
+.hero {
+
+    min-height: 85vh;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background: black;
+}
+
+
+.hero-video {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    z-index: 0;
+}
+
+
+.video-overlay {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.58);
+
+    z-index: 1;
+}
+
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 900px;
+
+    padding: 30px;
+
+    animation: heroAppear 2s ease;
+}
+
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(0.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+}
+
+
+.hero-content h1 {
+
+    font-size: clamp(45px, 8vw, 100px);
+
+    letter-spacing: 6px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+
+.hero-content p {
+
+    font-size: 20px;
+
+    color: #ddd;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   EXPLORE BUTTON
+========================================= */
+
+.explore-btn {
+
+    display: inline-block;
+
+    padding: 15px 32px;
+
+    background: #e62429;
+
+    border: 2px solid #e62429;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.explore-btn:hover {
+
+    background: transparent;
+
+    color: #e62429;
+
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   GALLERY SECTION
+========================================= */
+
+.gallery-section {
+
+    padding: 90px 7%;
+
+    text-align: center;
+
+    background: #080808;
+}
+
+
+.gallery-section h2 {
+
+    font-size: 42px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+
+.gallery-description {
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================================
+   FILTER BUTTONS
+========================================= */
+
+.filters {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+}
+
+
+.filter-btn {
+
+    padding: 11px 25px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid #e62429;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+.filter-btn:hover {
+
+    background: #e62429;
+
+    transform: translateY(-3px);
+}
+
+
+.filter-btn.active {
+
+    background: #e62429;
+
+    color: white;
+}
+
+
+/* =========================================
+   GALLERY GRID
+========================================= */
+
+.gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1400px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   IMAGE CARD
+========================================= */
+
+.gallery-item {
+
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    background: #151515;
+
+    border: 1px solid #252525;
+
+    transition: 0.4s;
+}
+
+
+.gallery-item:hover {
+
+    transform: translateY(-8px);
+
+    border-color: #e62429;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+
+.gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.6s;
+}
+
+
+.gallery-item:hover img {
+
+    transform: scale(1.1);
+}
+
+
+/* =========================================
+   IMAGE TITLE
+========================================= */
+
+.image-title {
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    padding: 60px 20px 20px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            transparent,
+            rgba(0, 0, 0, 0.95)
+        );
+
+    transition: 0.3s;
+}
+
+
+.gallery-item:hover .image-title {
+
+    padding-bottom: 25px;
+}
+
+
+.image-title h3 {
+
+    font-size: 21px;
+
+    margin-bottom: 5px;
+}
+
+
+.image-title p {
+
+    color: #e62429;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about {
+
+    padding: 90px 10%;
+
+    text-align: center;
+
+    background: #111;
+
+    border-top: 1px solid #222;
+}
+
+
+.about h2 {
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.about p {
+
+    max-width: 750px;
+
+    margin: auto;
+
+    color: #aaa;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+
+/* =========================================
+   LIGHTBOX
+========================================= */
+
+.lightbox {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.96);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 2000;
+
+    padding: 30px;
+}
+
+
+.lightbox-image {
+
+    max-width: 80%;
+
+    max-height: 85%;
+
+    object-fit: contain;
+
+    border: 2px solid #333;
+
+    box-shadow:
+        0 0 40px rgba(0, 0, 0, 0.8);
+
+    animation: lightboxZoom 0.3s ease;
+}
+
+
+@keyframes lightboxZoom {
+
+    from {
+
+        transform: scale(0.8);
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        transform: scale(1);
+
+        opacity: 1;
+
+    }
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+========================================= */
+
+.close {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 35px;
+
+    font-size: 50px;
+
+    color: white;
+
+    cursor: pointer;
+
+    z-index: 2001;
+
+    transition: 0.3s;
+}
+
+
+.close:hover {
+
+    color: #e62429;
+
+    transform: rotate(90deg);
+}
+
+
+/* =========================================
+   PREVIOUS / NEXT BUTTONS
+========================================= */
+
+.prev,
+.next {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 55px;
+
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid #555;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 2001;
+}
+
+
+.prev {
+
+    left: 30px;
+}
+
+
+.next {
+
+    right: 30px;
+}
+
+
+.prev:hover,
+.next:hover {
+
+    background: #e62429;
+
+    border-color: #e62429;
+
+    transform:
+        translateY(-50%)
+        scale(1.1);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+
+        padding: 0 4%;
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+
+    .gallery-item {
+
+        height: 320px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+
+        height: auto;
+
+        padding: 15px 4%;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+
+    .logo {
+
+        font-size: 20px;
+    }
+
+
+    .nav-links {
+
+        gap: 18px;
+    }
+
+
+    .nav-links a {
+
+        font-size: 14px;
+    }
+
+
+    .hero {
+
+        min-height: 70vh;
+    }
+
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+        letter-spacing: 3px;
+    }
+
+
+    .hero-content p {
+
+        font-size: 16px;
+    }
+
+
+    .gallery-section {
+
+        padding: 60px 5%;
+    }
+
+
+    .gallery-section h2 {
+
+        font-size: 30px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+
+        height: 380px;
+    }
+
+
+    .lightbox-image {
+
+        max-width: 80%;
+
+        max-height: 70%;
+    }
+
+
+    .prev {
+
+        left: 10px;
+    }
+
+
+    .next {
+
+        right: 10px;
+    }
+
+
+    .prev,
+    .next {
+
+        width: 45px;
+
+        height: 45px;
+
+        font-size: 24px;
+    }
+
+
+    .close {
+
+        right: 20px;
+
+        font-size: 40px;
+    }
+
+}
