@@ -1,0 +1,508 @@
+  <!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Marvel Studios | Cinematic Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            MARVEL
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="#home">Home</a>
+
+            <a href="#gallery">Gallery</a>
+
+            <a href="#about">About</a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= HERO VIDEO ================= -->
+
+    <section class="hero" id="home">
+
+
+        <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+        >
+
+            <source src="marvel-intro.mp4" type="video/mp4">
+
+            Your browser does not support video.
+
+        </video>
+
+
+        <div class="video-overlay"></div>
+
+
+        <div class="hero-content">
+
+            <h1>MARVEL STUDIOS</h1>
+
+            <p>
+                Enter the universe of heroes, villains and legendary stories.
+            </p>
+
+
+            <a href="#gallery" class="explore-btn">
+                EXPLORE GALLERY
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= GALLERY ================= -->
+
+    <section class="gallery-section" id="gallery">
+
+
+        <h2>MARVEL UNIVERSE</h2>
+
+
+        <p class="gallery-description">
+
+            Explore iconic Marvel heroes, powerful villains and legendary movies.
+
+        </p>
+
+
+
+        <!-- FILTER BUTTONS -->
+
+        <div class="filters">
+
+            <button class="filter-btn active" data-filter="All">
+                All
+            </button>
+
+            <button class="filter-btn" data-filter="Heroes">
+                Heroes
+            </button>
+
+            <button class="filter-btn" data-filter="Villains">
+                Villains
+            </button>
+
+            <button class="filter-btn" data-filter="Movies">
+                Movies
+            </button>
+
+        </div>
+
+
+
+        <!-- ================= IMAGE GALLERY ================= -->
+
+        <div class="gallery">
+
+
+            <!-- ============ HEROES ============ -->
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/bp.jpg" alt="Black Panther">
+
+                <div class="image-title">
+
+                    <h3>Black Panther</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/bw.jpg" alt="Black Widow">
+
+                <div class="image-title">
+
+                    <h3>Black Widow</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/cap.jpg" alt="Captain America">
+
+                <div class="image-title">
+
+                    <h3>Captain America</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/ds.jpg" alt="Doctor Strange">
+
+                <div class="image-title">
+
+                    <h3>Doctor Strange</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/hulk.jpg" alt="Hulk">
+
+                <div class="image-title">
+
+                    <h3>Hulk</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/ironman.jpg" alt="Iron Man">
+
+                <div class="image-title">
+
+                    <h3>Iron Man</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/spidy.jpg" alt="Spider-Man">
+
+                <div class="image-title">
+
+                    <h3>Spider-Man</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Heroes">
+
+                <img src="images/thor.jpg" alt="Thor">
+
+                <div class="image-title">
+
+                    <h3>Thor</h3>
+
+                    <p>Hero</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============ VILLAINS ============ -->
+
+
+            <div class="gallery-item" data-category="Villains">
+
+                <img src="images/doom.jpg" alt="Doctor Doom">
+
+                <div class="image-title">
+
+                    <h3>Doctor Doom</h3>
+
+                    <p>Villain</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Villains">
+
+                <img src="images/hela.jpg" alt="Hela">
+
+                <div class="image-title">
+
+                    <h3>Hela</h3>
+
+                    <p>Villain</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Villains">
+
+                <img src="images/loki.jpg" alt="Loki">
+
+                <div class="image-title">
+
+                    <h3>Loki</h3>
+
+                    <p>Villain</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Villains">
+
+                <img src="images/thanos.jpg" alt="Thanos">
+
+                <div class="image-title">
+
+                    <h3>Thanos</h3>
+
+                    <p>Villain</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Villains">
+
+                <img src="images/ultron.jpg" alt="Ultron">
+
+                <div class="image-title">
+
+                    <h3>Ultron</h3>
+
+                    <p>Villain</p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ============ MOVIES ============ -->
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/avengers.jpg" alt="The Avengers">
+
+                <div class="image-title">
+
+                    <h3>The Avengers</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/cap1.jpg" alt="Captain America Movie">
+
+                <div class="image-title">
+
+                    <h3>Captain America</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/hulk1.jpg" alt="The Incredible Hulk">
+
+                <div class="image-title">
+
+                    <h3>The Incredible Hulk</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/ironman1.jpg" alt="Iron Man Movie">
+
+                <div class="image-title">
+
+                    <h3>Iron Man</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/ironman2.jpg" alt="Iron Man 2">
+
+                <div class="image-title">
+
+                    <h3>Iron Man 2</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery-item" data-category="Movies">
+
+                <img src="images/thor1.jpg" alt="Thor Movie">
+
+                <div class="image-title">
+
+                    <h3>Thor</h3>
+
+                    <p>Movie</p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section class="about" id="about">
+
+
+        <h2>ABOUT THE GALLERY</h2>
+
+
+        <p>
+
+            Welcome to the Marvel Studios Cinematic Gallery.
+            Explore iconic heroes, powerful villains and legendary
+            movies through an interactive and responsive image gallery.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ================= LIGHTBOX ================= -->
+
+    <div class="lightbox" id="lightbox">
+
+
+        <span class="close">
+            &times;
+        </span>
+
+
+        <button class="prev">
+            &#10094;
+        </button>
+
+
+        <img
+            class="lightbox-image"
+            id="lightbox-image"
+            src=""
+            alt="Selected Marvel image"
+        >
+
+
+        <button class="next">
+            &#10095;
+        </button>
+
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
